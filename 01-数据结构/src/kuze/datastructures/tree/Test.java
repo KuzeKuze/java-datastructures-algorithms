@@ -3,12 +3,12 @@ package kuze.datastructures.tree;
 public class Test {
 
     public static void main(String[] args) {
-        Node root = new Node("1");
-        root.setLeft(new Node("3"));
-        root.setRight(new Node("2"));
-        root.getLeft().setLeft(new Node("5"));
-        root.getRight().setRight(new Node("7"));
-        root.getLeft().setRight(new Node("4"));
+        BinaryTreeNode root = new BinaryTreeNode("1");
+        root.setLeft(new BinaryTreeNode("3"));
+        root.setRight(new BinaryTreeNode("2"));
+        root.getLeft().setLeft(new BinaryTreeNode("5"));
+        root.getRight().setRight(new BinaryTreeNode("7"));
+        root.getLeft().setRight(new BinaryTreeNode("4"));
 
         BinaryTreeAlgorithms.preorderByRecursion(root);
         System.out.println();

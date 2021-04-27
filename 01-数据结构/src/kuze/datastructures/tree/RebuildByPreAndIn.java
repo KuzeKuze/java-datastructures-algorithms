@@ -8,19 +8,19 @@ import java.util.List;
  */
 public class RebuildByPreAndIn {
 
-    public static Node rebuild(List<String> pre, List<String> in){
+    public static BinaryTreeNode rebuild(List<String> pre, List<String> in){
         if(pre.size() != in.size()){
             return null;
         }
         if(pre.size() == 1){
-            return new Node(pre.get(0));
+            return new BinaryTreeNode(pre.get(0));
         }
         if(pre.size() == 0){
             return null;
         }
 
         // 构造根节点
-        Node root = new Node(pre.get(0));
+        BinaryTreeNode root = new BinaryTreeNode(pre.get(0));
 
         // 构造左右子树
         int indexRootIn = in.indexOf(pre.get(0));
@@ -50,7 +50,7 @@ public class RebuildByPreAndIn {
 
         String[] pre = {"1", "3", "5", "4", "2", "7"};
         String[] in = {"5", "3", "4", "1", "2", "7"};
-        Node root = rebuild(Arrays.asList(pre), Arrays.asList(in));
+        BinaryTreeNode root = rebuild(Arrays.asList(pre), Arrays.asList(in));
         BinaryTreeAlgorithms.postorderByRecursion(root);
         System.out.println();
         BinaryTreeAlgorithms.postorderByStack(root);
