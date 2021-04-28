@@ -6,7 +6,7 @@ public class BinaryTreePreOrderTraverse {
 
     public static void traverse(BinaryTreeNode root){
         if(root != null){
-            System.out.println(root.val + " ");
+            System.out.print(root.val + " ");
             traverse(root.left);
             traverse(root.right);
         }
@@ -19,7 +19,7 @@ public class BinaryTreePreOrderTraverse {
 
         while(!stack.empty()){
             BinaryTreeNode p = stack.pop();
-            System.out.println(p.val + " ");
+            System.out.print(p.val + " ");
             if( p.right != null ) stack.push(p.right);
             if( p.left != null ) stack.push(p.left);
         }

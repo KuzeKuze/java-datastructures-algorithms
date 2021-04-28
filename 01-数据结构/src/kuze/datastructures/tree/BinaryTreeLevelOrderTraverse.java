@@ -10,7 +10,7 @@ public class BinaryTreeLevelOrderTraverse {
         if( root != null ) queue.offer(root);
         while( !queue.isEmpty() ){
             BinaryTreeNode p = queue.poll();
-            System.out.println(p.val + " ");
+            System.out.print(p.val + " ");
             if( p.left != null ) queue.offer(p.left);
             if( p.right != null ) queue.offer(p.right);
         }

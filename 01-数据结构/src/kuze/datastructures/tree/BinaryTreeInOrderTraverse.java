@@ -7,7 +7,7 @@ public class BinaryTreeInOrderTraverse {
     public static void traverse(BinaryTreeNode root){
         if(root != null){
             traverse(root.left);
-            System.out.println(root.val + " ");
+            System.out.print(root.val + " ");
             traverse(root.right);
         }
     }
@@ -21,7 +21,7 @@ public class BinaryTreeInOrderTraverse {
                 p = p.left;
             }
             p = stack.pop();
-            System.out.println(p.val + " ");
+            System.out.print(p.val + " ");
             p = p.right;
         }
     }

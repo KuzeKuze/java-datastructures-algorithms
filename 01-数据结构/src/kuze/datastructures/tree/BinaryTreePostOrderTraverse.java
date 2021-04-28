@@ -8,7 +8,7 @@ public class BinaryTreePostOrderTraverse {
         if(root != null){
             traverse(root.left);
             traverse(root.right);
-            System.out.println(root.val + " ");
+            System.out.print(root.val + " ");
         }
     }
 
@@ -31,7 +31,7 @@ public class BinaryTreePostOrderTraverse {
         }
         while(!stack2.empty()){
             BinaryTreeNode p = stack2.pop();
-            System.out.println(p.val + " ");
+            System.out.print(p.val + " ");
         }
     }
 }
